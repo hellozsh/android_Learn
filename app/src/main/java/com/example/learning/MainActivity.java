@@ -13,6 +13,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.MultiAutoCompleteTextView;
+import android.widget.RadioGroup;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView img;
 
     private CheckBox checkBox;
+
+    private RadioGroup rg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +113,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+        rg = findViewById(R.id.radioGroup);
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                switch (checkedId) {
+                    case R.id.radioButton1:
+                        Log.i("tag"," RadioGroup的篮球被点击了"+checkedId);
+                        break;
+                    case R.id.radioButton2:
+                        Log.i("tag"," RadioGroup的足球被点击了"+checkedId);
+                        break;
+                    case R.id.radioButton3:
+                        Log.i("tag"," RadioGroup的羽毛球被点击了"+checkedId);
+                        break;
+                }
+
+            }
+        });
 
     }
 
