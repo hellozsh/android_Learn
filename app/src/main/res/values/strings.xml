@@ -3,4 +3,9 @@
 
     <string name="button_name">登陆</string>
 
+    <string name="frame_first">第一个页面</string>
+    <string name="frame_second">第二个页面</string>
+    <string name="frame_third">第三个页面</string>
+    <string name="frame_four">第四个页面</string>
+
 </resources>

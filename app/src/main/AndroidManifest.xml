@@ -10,12 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
+            <intent-filter> // 设成主入口
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".layoutActivity">
+        </activity>>
+
+        <activity android:name=".relativeActivity">
+        </activity>>
+
+        <activity android:name=".frameActivity">
+        </activity>>
+
+        <activity android:name=".absoluteActivity">
+        </activity>>
+
+        <activity android:name=".tableActivity">
+        </activity>>
+
+        <activity android:name=".activityActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog"
+            >
+        </activity>
+
     </application>
 
 </manifest>

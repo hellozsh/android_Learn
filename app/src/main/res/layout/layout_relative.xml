@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+ <ImageView
+     android:id="@+id/imageView"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     app:srcCompat="@android:drawable/ic_lock_lock"
+     android:layout_alignParentLeft="true"
+     android:layout_alignParentTop="true"
+     android:layout_marginLeft="20dp"
+     android:layout_marginTop="20dp"
+     />
+
+ <TextView
+     android:id="@+id/textView2"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignTop="@+id/imageView"
+     android:layout_toRightOf="@+id/imageView"
+     android:text="包子" />
+
+ <TextView
+    android:id="@+id/textView3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/textView2"
+    android:layout_below="@+id/textView2"
+    android:text="20元一个" />
+
+ <TextView
+     android:id="@+id/textView4"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignLeft="@+id/imageView"
+     android:layout_below="@+id/imageView"
+     android:textSize="20sp"
+     android:text="不敢想象，真的好贵" />
+
+
+   // android:layout_alignParent(Left、Top)="true": 子类控件相对当前父类容器靠左边，上
+    // android:layout_margin(Left、Top)="41dp": 子类控件距离父类容器左、上的距离
+    // android:layout_centerInParent="true": 子类控件相对父类容器水平居中又垂直居中
+    // android:layout_centerHorizontal="true": 子类控件相对父类容器水平居中
+    // android:layout_centerVertical="true"：子类控件相对父类容器垂直居中
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="100sp"
+        android:text="Button6" />
+
+    // 子类控件相对子类控件的一个位置
+    // android:layout_above="@+id/button6": 该控件位于给定id控件的上面
+    // android:layout_below="@+id/button6"：该控件位于给定id控件的下面
+    // android:layout_toRightOf="@+id/button6": 该控件位于给定id控件的右边
+    // android:layout_alignBaseline="@+id/button6" 该控件的内容与给定id控件的内容在一条线上
+    // android:layout_alignBottom="@+id/button6"  该控件的底部边缘与给定ID控件的底部边缘对齐
+
+ <Button
+     android:id="@+id/button7"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignBaseline="@+id/button6"
+     android:text="Button7" />
+
+
+
+
+</RelativeLayout>

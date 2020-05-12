@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    >
+
+
+    // 以行列的形式管理子控件，每一行为一个TableRow的对象，当然也可以是一个View的对象
+
+    // 全局属性
+
+    // android:collapseColumns = "1,2"
+    // 隐藏从0开始的索引列。列之间必须用逗号隔开： 1，2，5
+
+    // android:shrinkColumns = "1,2"
+    // 收缩从0开始的索引列。当可收缩的列太宽(内容过多)不会被寄出屏幕
+    // 列之间必须用逗号隔开：1，2，5，你可以通过"*"代替收缩所有列
+    // 注意一列能同时表示收缩和拉伸
+
+    // android:stretchColumns = "1,2"
+    // 拉伸从0开始的索引列。以填满剩下的多余空白空间，
+    // 列之间必须用逗号隔开：1，2，5，你可以通过"*"代替收缩所有列
+    // 注意一列能同时表示收缩和拉伸
+
+    // 局部属性
+    // android:layout_column = "1"
+    // 该控件显示在第1列
+    // android:layout_span = "2"
+    // 该控件占据2列
+
+    <!--<TableRow-->
+        <!--android:id="@+id/tableRow1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--&gt;-->
+
+        <!--<Button-->
+            <!--android:id="@+id/buttonRow1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="1" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/buttonRow2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="2" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/buttonRow3"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="3" />-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/buttonRow4"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_con
+            tent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="4444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444444" />&ndash;&gt;-->
+
+    <!--</TableRow>-->
+
+    // TextView里设置 android:gravity="right" 文本位置
+    <TextView
+        android:background="#f0f0f0"
+        android:id="@+id/textViewTable1"
+        android:layout_height="40dp"
+        android:text="90"
+        android:gravity="right"
+        >
+    </TextView>>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <Button
+            android:id="@+id/buttonTable7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/buttonTable8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/buttonTable9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/buttonTable11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/" />
+
+    </TableRow>>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <Button
+            android:id="@+id/buttonTable4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/buttonTable5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/buttonTable6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/buttonTable12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*" />
+
+    </TableRow>>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <Button
+            android:id="@+id/buttonTable1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/buttonTable2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/buttonTable3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/buttonTable13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-" />
+
+    </TableRow>>
+
+
+</TableLayout>

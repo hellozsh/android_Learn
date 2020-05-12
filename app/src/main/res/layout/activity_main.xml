@@ -144,7 +144,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox"
         >
@@ -153,27 +152,90 @@
         android:id="@+id/radioButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="篮球"
+        android:text="线性布局"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="542dp" />
     <RadioButton
         android:id="@+id/radioButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="足球"
+        android:text="相对布局"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="542dp" />
     <RadioButton
         android:id="@+id/radioButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="羽毛球"
+        android:text="帧布局"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="542dp" />
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绝对布局被弃用"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="542dp" />
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="表格布局"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="542dp" />
 
     </RadioGroup>
 
 
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintStart_toEndOf="@id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        >
+
+        <RadioButton
+            android:id="@+id/radioButton21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity生命周期"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="542dp" />
+        <RadioButton
+            android:id="@+id/radioButton22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IntentFirst"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="542dp" />
+        <RadioButton
+            android:id="@+id/radioButton23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IntentSecond"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="542dp" />
+        <RadioButton
+            android:id="@+id/radioButton24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="542dp" />
+        <RadioButton
+            android:id="@+id/radioButton25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="542dp" />
+
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

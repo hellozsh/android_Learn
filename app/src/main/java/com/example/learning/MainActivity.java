@@ -2,6 +2,7 @@ package com.example.learning;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private CheckBox checkBox;
 
     private RadioGroup rg;
+    private RadioGroup rg2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            }
 //        });
         // 独立类实现
-//        loginButton.setOnClickListener(listener);
+        loginButton.setOnClickListener(listener);
 
         // 接口方式实现
         // 1.类 implements View.OnClickListener
@@ -114,24 +116,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         rg = findViewById(R.id.radioGroup);
-        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
+        rg2 = findViewById(R.id.radioGroup2);
 
-                switch (checkedId) {
-                    case R.id.radioButton1:
-                        Log.i("tag"," RadioGroup的篮球被点击了"+checkedId);
-                        break;
-                    case R.id.radioButton2:
-                        Log.i("tag"," RadioGroup的足球被点击了"+checkedId);
-                        break;
-                    case R.id.radioButton3:
-                        Log.i("tag"," RadioGroup的羽毛球被点击了"+checkedId);
-                        break;
-                }
-
-            }
-        });
+        rg2.setOnCheckedChangeListener(groupListener);
+        rg.setOnCheckedChangeListener(groupListener);
 
     }
 
@@ -149,4 +137,68 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Log.i("tag","独立类实现的监听事件:我的button被点击了");
         }
     };
+
+    RadioGroup.OnCheckedChangeListener groupListener = new RadioGroup.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+            // 页面跳转
+            Intent it = new Intent();
+
+            switch (checkedId) {
+                case R.id.radioButton1:
+                    Log.i("tag"," RadioGroup的线性布局被点击了"+checkedId);
+                    it.setClass(MainActivity.this,layoutActivity.class);
+                    MainActivity.this.startActivity(it);
+                    break;
+                case R.id.radioButton2:
+                    Log.i("tag"," RadioGroup的相对布局被点击了"+checkedId);
+                    it.setClass(MainActivity.this,relativeActivity.class);
+                    MainActivity.this.startActivity(it);
+                    break;
+                case R.id.radioButton3:
+                    Log.i("tag"," RadioGroup的帧布局被点击了"+checkedId);
+                    it.setClass(MainActivity.this,frameActivity.class);
+                    MainActivity.this.startActivity(it);
+                    break;
+                case R.id.radioButton4:
+                    Log.i("tag"," RadioGroup的绝对布局被点击了"+checkedId);
+                    it.setClass(MainActivity.this,absoluteActivity.class);
+                    MainActivity.this.startActivity(it);
+                    break;
+                case R.id.radioButton5:
+                    Log.i("tag"," RadioGroup的表格布局被点击了"+checkedId);
+                    it.setClass(MainActivity.this,tableActivity.class);
+                    MainActivity.this.startActivity(it);
+                    break;
+                case R.id.radioButton21:
+                    Log.i("tag"," RadioGroup的生命周期被点击了"+checkedId);
+                    it.setClass(MainActivity.this,activityActivity.class);
+                    MainActivity.this.startActivity(it);
+                    break;
+                case R.id.radioButton22:
+                    Log.i("tag"," RadioGroup的IntentFirst被点击了"+checkedId);
+                    it.setClass(MainActivity.this,activityActivity.class);
+                    MainActivity.this.startActivity(it);
+                    break;
+                case R.id.radioButton23:
+                    Log.i("tag"," RadioGroup的IntentSecond被点击了"+checkedId);
+                    it.setClass(MainActivity.this,activityActivity.class);
+                    MainActivity.this.startActivity(it);
+                    break;
+                case R.id.radioButton24:
+                    Log.i("tag"," RadioGroup的被点击了"+checkedId);
+                    it.setClass(MainActivity.this,tableActivity.class);
+                    MainActivity.this.startActivity(it);
+                    break;
+                case R.id.radioButton25:
+                    Log.i("tag"," RadioGroup的被点击了"+checkedId);
+                    it.setClass(MainActivity.this,tableActivity.class);
+                    MainActivity.this.startActivity(it);
+                    break;
+            }
+
+        }
+    };
+
 }
