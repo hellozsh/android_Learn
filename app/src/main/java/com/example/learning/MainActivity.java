@@ -17,6 +17,53 @@ import android.widget.MultiAutoCompleteTextView;
 import android.widget.RadioGroup;
 import android.widget.ToggleButton;
 
+// AndroidManifest.xml 配置文件介绍
+/*
+
+  本质: AndroidManifest.xml是整个应用的主配置清单文件
+  包含：该应用的包名、版本号、组件、权限
+  作用: 记录该应用的相关的配置信息
+ */
+/*
+  全局篇
+  1： 应用的包名和版本信息的管理
+      package = "com.example.test"
+      android:versionCode = "1"
+      android:versionName = "1.0"
+  2: 控制android版本信息(可以支持的最低版本、你期望的系统版本)
+     android:minSdkVersion = "8"
+     android:targetSdkVersion = "16"
+
+  组件篇
+    其属性可以设置:
+       图标:   android:icon
+       标题:   android:label
+       主题样式: android:theme
+    Activity 页面：启动一个没有在清单中定义的Activity会抛出异常
+    Service  启动一个后台服务的处理
+    Content Provider 用来管理数据库访问以及程序内和程序间共享的
+    Broadcast Receiver 广播接收者里头的intent-filter匹配过滤
+
+  权限篇
+    1：使用系统权限
+     <uses-permission> 申请权限
+     声明了哪些是由你定义的权限，而这些权限是应用程序正常执行所必需的。在安装程序的时，你设定的所有权限将会告诉给用户，
+     由他们来决定同意与否。对很多本地Android服务来说，权限都是必需的，特别是那些需要付费或者有安全问题的服务(例如，拨号、接收SMS
+     或者有安全问题的服务)
+
+    2：自定义权限
+    自定义权限可以自定义命名，来保护android的某些重要组件
+
+ */
+
+ /*
+  注意事项
+  1.每个组件都必须包含android:name这个属性，推荐用全名称(包名.类名),
+    intent-filter(过滤器)可以选写
+  2.四大组件中除了BroadcastReceiver可以使用代码声明注册以外，其他组件必须要在Manifest
+    文件中进行声明配置，否则会报错
+  */
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private AutoCompleteTextView acTextView;
@@ -178,7 +225,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 case R.id.radioButton22:
                     Log.i("tag"," RadioGroup的IntentFirst被点击了"+checkedId);
-                    it.setClass(MainActivity.this,activityActivity.class);
+
+                    it.setAction("aaa.bbb.ccc");
+                    it.addCategory("android.intent.category.DEFAULT");
                     MainActivity.this.startActivity(it);
                     break;
                 case R.id.radioButton23:

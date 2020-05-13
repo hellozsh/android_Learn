@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.learning">
+    package="com.example.learning"
+    android:versionCode="1"
+    android:versionName="1.0"
+    >
+    <uses-sdk android:minSdkVersion="16"
+        android:targetSdkVersion="19"/>
+
+    // 权限
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <permission android:name="eee.fff.ggg"
+        android:protectionLevel="normal">  // 自定义一个权限，这样别的app访问这个app的时候就需要添加权限
+
+   // uses-permission android:name="eee.fff.ggg" /> 别的app需要添加的权限
+
+    </permission>>
 
     <application
         android:allowBackup="true"
@@ -9,9 +23,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter> // 设成主入口
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity"
+            android:permission="eee.fff.ggg">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" /> // 设成主入口
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -27,6 +42,7 @@
         </activity>>
 
         <activity android:name=".absoluteActivity">
+
         </activity>>
 
         <activity android:name=".tableActivity">
@@ -37,6 +53,25 @@
             >
         </activity>
 
+        <activity android:name=".intentActivity">
+            <intent-filter>
+                <action android:name="aaa.bbb.ccc" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>>
+        </activity>>
+
+        <service android:name=".BaseService">
+        </service>>
+
+        <receiver
+            android:name=".BaseReceiver">
+        </receiver>>
+
+        <provider android:name=".BaseProvider"
+            android:authorities="aaa.bbb.ccc.ddd">
+        </provider>>
     </application>
+
+
 
 </manifest>
