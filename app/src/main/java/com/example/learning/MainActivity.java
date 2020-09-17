@@ -17,6 +17,9 @@ import android.widget.MultiAutoCompleteTextView;
 import android.widget.RadioGroup;
 import android.widget.ToggleButton;
 
+import com.example.learning.second.*;
+
+
 // AndroidManifest.xml 配置文件介绍
 /*
 
@@ -226,7 +229,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 case R.id.radioButton22:
                     Log.i("tag"," RadioGroup的IntentFirst被点击了"+checkedId);
 
-                    it.setAction("aaa.bbb.ccc");
+                    it.setAction("aaa.bbb.ccc");  // 是intentActivity下的Intent信息，所以会去intentActivity
                     it.addCategory("android.intent.category.DEFAULT");
                     MainActivity.this.startActivity(it);  // 页面跳转
                     break;
@@ -237,7 +240,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 case R.id.radioButton24:
                     Log.i("tag"," RadioGroup的被点击了"+checkedId);
-                    it.setClass(MainActivity.this,tableActivity.class);
+                    it.setClass(MainActivity.this,ListviewActivity.class);
                     MainActivity.this.startActivity(it);
                     break;
                 case R.id.radioButton25:

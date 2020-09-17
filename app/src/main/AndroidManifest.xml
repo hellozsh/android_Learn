@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.learning"
     android:versionCode="1"
     android:versionName="1.0"
@@ -17,8 +18,6 @@
 
     </permission>>
 
-
-
     // 组件篇，只能包含一个application
     // android:icon 图标
     // android:label标题
@@ -32,8 +31,7 @@
         android:theme="@style/AppTheme">
 
         // 页面，一般会是包名+类名全称，这里没有， 启动一个没有在清单中定义的Activity会抛出异常
-        <activity android:name=".MainActivity"
-            android:permission="eee.fff.ggg">
+        <activity android:name=".MainActivity">   // android:permission="eee.fff.ggg"，自定义权限，别的app跳转这里需要添加权限
             <intent-filter> // intent-filter 名片，这里介绍他是主页面
                 <action android:name="android.intent.action.MAIN" /> // 设成主入口
 
@@ -69,6 +67,10 @@
             </intent-filter>>
         </activity>>
 
+        <activity android:name=".second.ListviewActivity">
+
+        </activity>
+
 
         <!-- Alt+/ 代码提示 -->
 
@@ -85,7 +87,15 @@
         <provider android:name="com.example.learning.BaseProvider"
             android:authorities="aaa.bbb.ccc.ddd">
         </provider>>
+
+
+
+
+
     </application>
+
+
+
 
 
 
