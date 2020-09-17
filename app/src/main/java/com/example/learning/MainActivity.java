@@ -228,7 +228,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     it.setAction("aaa.bbb.ccc");
                     it.addCategory("android.intent.category.DEFAULT");
-                    MainActivity.this.startActivity(it);
+                    MainActivity.this.startActivity(it);  // 页面跳转
                     break;
                 case R.id.radioButton23:
                     Log.i("tag"," RadioGroup的IntentSecond被点击了"+checkedId);
