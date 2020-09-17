@@ -92,6 +92,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // 将布局xml文件引入到activity当中
         setContentView(R.layout.activity_main);
 
+
+
         // AutoCompleteTextView使用
         /*
          * 第一步:初始化控件
@@ -228,7 +230,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 case R.id.radioButton22:
                     Log.i("tag"," RadioGroup的IntentFirst被点击了"+checkedId);
-
                     it.setAction("aaa.bbb.ccc");  // 是intentActivity下的Intent信息，所以会去intentActivity
                     it.addCategory("android.intent.category.DEFAULT");
                     MainActivity.this.startActivity(it);  // 页面跳转
@@ -245,7 +246,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     break;
                 case R.id.radioButton25:
                     Log.i("tag"," RadioGroup的被点击了"+checkedId);
-                    it.setClass(MainActivity.this,tableActivity.class);
+                    it.setClass(MainActivity.this,DataTimeActivity.class);
                     MainActivity.this.startActivity(it);
                     break;
             }
